@@ -97,9 +97,9 @@ static const CGFloat labelSize = 19;
 	
 	NSMutableArray *cells = [NSMutableArray arrayWithCapacity:labelCount];
 	for(NSInteger i = 0; i < labelCount; i++) {
-		HMLabelCell *cell = [[[HMLabelCell alloc] initTextCell:@""] autorelease];
+		HMLabelCell *cell = [[HMLabelCell alloc] initTextCell:@""];
 		[cells addObject:cell];
-		[self addTrackingRect:[self labelRectForIndex:i] owner:self userData:[NSNumber numberWithInteger:i] assumeInside:NO];
+		[self addTrackingRect:[self labelRectForIndex:i] owner:self userData:(__bridge void *)([NSNumber numberWithInteger:i]) assumeInside:NO];
 		[cell setEnabled:YES];
 		[cell setBordered:YES];
 		[cell setIntegerValue:i];
@@ -115,14 +115,6 @@ static const CGFloat labelSize = 19;
         [self setupCells];
     }
     return self;
-}
-- (void)dealloc
-{
-	[title release];
-	[labelCells release];
-	[labelName release];
-	
-	[super dealloc];
 }
 - (NSSize)minimumSize
 {

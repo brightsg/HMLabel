@@ -76,7 +76,6 @@
 {
 	if(integer == [self integerValue]) return;
 	
-	[gradient release];
 	gradient = nil;
 	
 	[super setIntegerValue:integer];
@@ -86,17 +85,14 @@
 {
 	if([value isEqual:[self objectValue]]) return;
 	
-	[gradient release];
 	gradient = nil;
 	
 	[super setObjectValue:value];
 }
 - (void)dealloc
 {
-	[gradient release];
 	gradient = nil;
 	
-	[super dealloc];
 }
 
 - (void)setLabelStyle:(NSInteger)style
@@ -192,7 +188,7 @@
 	[NSGraphicsContext saveGraphicsState];
 	
 	[[NSColor lightGrayColor] set];
-	NSShadow *shadow = [[[NSShadow alloc] init] autorelease];
+	NSShadow *shadow = [[NSShadow alloc] init];
 	[shadow setShadowOffset:NSMakeSize(.3, .3)];
 	[shadow setShadowBlurRadius:0.5];
 	[shadow set];

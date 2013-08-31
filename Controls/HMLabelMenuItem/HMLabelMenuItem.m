@@ -1,8 +1,8 @@
 //
-//  HMLabelControl.m
+//  HMLabelMenuItem.m
 //  XspfManager
 //
-//  Created by Hori,Masaki on 10/01/06.
+//  Created by Hori,Masaki on 10/01/04.
 //
 
 /*
@@ -59,67 +59,113 @@
  POSSIBILITY OF SUCH DAMAGE.
 */
 
-#import "HMLabelControl.h"
+#import "HMLabelMenuItem.h"
 
-#import "HMLabelCell.h"
+#import "HMLabelMenuView.h"
 
 
-@implementation HMLabelControl
 
-- (void)setup
+@implementation HMLabelMenuItem
++ (void)initialize
 {
-	id cell = [[[HMLabelCell alloc] initTextCell:@""] autorelease];
-	[self setCell:cell];
+	static BOOL isFirst = YES;
+	if(isFirst) {
+		isFirst = NO;
+		[self exposeBinding:@"labelValue"];
+	}
 }
-- (id)initWithFrame:(NSRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setup];
-    }
-    return self;
+- (NSArray *)exposedBindings
+{
+	NSMutableArray *result = [NSMutableArray arrayWithArray:[super exposedBindings]];
+	[result addObject:@"labelValue"];
+	return result;
+}
+- (Class)valueClassForBinding:(NSString *)binding
+{
+	if([binding isEqualToString:@"labelValue"]) {
+		return [NSNumber class];
+	}
+	
+	return [super valueClassForBinding:binding];
+}
+
+- (void)setupView
+{
+	NSRect viewFrame = NSMakeRect(0,0,200, 62);
+	HMLabelMenuView *view = [[HMLabelMenuView alloc] initWithFrame:viewFrame];
+	[view setAction:[self action]];
+	[view setTarget:[self target]];
+	[view setMenuLabel:[self title]];
+	[view sizeToFit];
+	[super setView:view];
+	[[self menu] update];
+}
+- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode
+{
+	self = [super initWithTitle:aString action:aSelector keyEquivalent:charCode];
+	if(self) {
+		[self setupView];
+	}
+	
+	return self;
 }
 - (id)initWithCoder:(id)decoder
 {
 	self = [super initWithCoder:decoder];
 	if(self) {
-		[self setup];
+		[self setupView];
 	}
-	[self setLabelStyle:[decoder decodeIntegerForKey:@"HMLabelLabelStyleKey"]];
-	[self setDrawX:[decoder decodeBoolForKey:@"HMLabelIsDrawXKey"]];
-	[self setValue:[decoder decodeObjectForKey:@"HMLabelValueKey"]];
-	
 	return self;
 }
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (id)copyWithZone:(NSZone *)zone
 {
-	[super encodeWithCoder:aCoder];
-	[aCoder encodeInteger:[self labelStyle] forKey:@"HMLabelLabelStyleKey"];
-	[aCoder encodeBool:[self isDrawX] forKey:@"HMLabelIsDrawXKey"];
-	[aCoder encodeObject:[self value] forKey:@"HMLabelValueKey"];
+	id result = [super copyWithZone:zone];
+	[result setObjectValue:[self objectValue]];
+	
+	return result;
 }
-- (void)setValue:(id)value
+
+- (void)setView:(NSView *)view
 {
-	[self setObjectValue:value];
+	// ignore.
 }
-- (id)value
+- (HMLabelMenuView *)labelView
 {
-	return [self objectValue];
+	return (HMLabelMenuView *)[super view];
 }
-- (void)setLabelStyle:(NSInteger)style
+
+- (void)setObjectValue:(id)value
 {
-	[[self cell] setLabelStyle:style];
+	[[self labelView] setObjectValue:value];
 }
-- (NSInteger)labelStyle
+- (id)objectValue
 {
-	return [[self cell] labelStyle];
+	return [[self labelView] objectValue];
 }
-- (void)setDrawX:(BOOL)flag
+- (void)setIntegerValue:(NSInteger)value
 {
-	[[self cell] setDrawX:flag];
+	[[self labelView] setIntegerValue:value];
 }
-- (BOOL)isDrawX
+- (NSInteger)integerValue
 {
-	return [[self cell] isDrawX];
+	return [[self labelView] integerValue];
+}
+
+- (NSInteger)labelValue
+{
+	return [self integerValue];
+}
+- (void)setLabelValue:(NSInteger)value
+{
+	[self setIntegerValue:value];
+	
+	id info = [self infoForBinding:@"labelValue"];
+	if(info) {
+		id object = [info valueForKey:NSObservedObjectKey];
+		NSString *keypath = [info valueForKey:NSObservedKeyPathKey];
+		[object setValue:[NSNumber numberWithInteger:value]
+			  forKeyPath:keypath];
+	}
 }
 
 @end

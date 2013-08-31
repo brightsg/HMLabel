@@ -108,21 +108,21 @@ static const CGFloat yMargin = 2;
 	for(i = 0; i < labelCount; i++) {
 		NSImageCell *cell;
 		if(isImageCell) {
-			cell = [[[cellClass alloc] initImageCell:nil] autorelease];
+			cell = [[cellClass alloc] initImageCell:nil];
 		} else {
-			cell = [[[cellClass alloc] initTextCell:@""] autorelease];
+			cell = [[cellClass alloc] initTextCell:@""];
 		}
 		[cell setIntegerValue:i];
 		[cell setEnabled:YES];
 		[cell setBordered:YES];
 		[cells addObject:cell];
-		[self addTrackingRect:[self labelRectForIndex:i] owner:self userData:[NSNumber numberWithInteger:i] assumeInside:NO];
+		[self addTrackingRect:[self labelRectForIndex:i] owner:self userData:(__bridge void *)([NSNumber numberWithInteger:i]) assumeInside:NO];
 	}
 	[self setCell:[cells objectAtIndex:0]];
 	[self setIntegerValue:0];
 	[[cells objectAtIndex:0] setState:NSOnState];
 	
-	labelCells = [[NSArray arrayWithArray:cells] retain];
+	labelCells = [NSArray arrayWithArray:cells];
 }
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -149,11 +149,6 @@ static const CGFloat yMargin = 2;
 	[aCoder encodeInteger:[self labelStyle] forKey:@"HMLabelLabelStyleKey"];
 	[aCoder encodeBool:[self isDrawX] forKey:@"HMLabelIsDrawXKey"];
 	[aCoder encodeObject:[self value] forKey:@"HMLabelValueKey"];
-}
-- (void)dealloc
-{
-	[labelCells release];
-	[super dealloc];
 }
 
 - (NSSize)minimumSize

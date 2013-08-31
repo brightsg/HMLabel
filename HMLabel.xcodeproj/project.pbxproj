@@ -24,41 +24,34 @@
 /* Begin PBXBuildFile section */
 		13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		546DEAF3067F632A0098DCC4 /* HMLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* HMLabel.framework */; };
-		8D1AC96C0486D14A00FE50C9 /* HMLabelInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* HMLabelInspector.m */; settings = {ATTRIBUTES = (); }; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
-		C044829F0C3328F4006E818F /* HMLabelFieldIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = C044829E0C3328F4006E818F /* HMLabelFieldIntegration.m */; };
 		C0A47C500A523B730004BDC3 /* HMLabelInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* HMLabelInspector.xib */; };
 		C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
 		D1AEDE470A6C289C0010C343 /* HMLabelLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* HMLabelLibrary.nib */; };
-		F4B1E025158B9786009B4079 /* HMLabelCell.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = F4F36F5911C11C410008E7F3 /* HMLabelCell.classdescription */; };
-		F4B1E026158B9786009B4079 /* HMLabelControl.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = F4F36F5B11C11C930008E7F3 /* HMLabelControl.classdescription */; };
-		F4B1E027158B9786009B4079 /* HMLabelField.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* HMLabelField.classdescription */; };
-		F4B1E028158B9786009B4079 /* HMLabelMenuItem.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = F4F36F5711C11BF30008E7F3 /* HMLabelMenuItem.classdescription */; };
+		E46D7C8D17D122D7007D2F0E /* HMLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D7C7E17D122D7007D2F0E /* HMLabelCell.h */; };
+		E46D7C8E17D122D7007D2F0E /* HMLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7C7F17D122D7007D2F0E /* HMLabelCell.m */; };
+		E46D7C8F17D122D7007D2F0E /* HMLabelControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D7C8117D122D7007D2F0E /* HMLabelControl.h */; };
+		E46D7C9017D122D7007D2F0E /* HMLabelControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7C8217D122D7007D2F0E /* HMLabelControl.m */; };
+		E46D7C9117D122D7007D2F0E /* HMLabelField.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D7C8417D122D7007D2F0E /* HMLabelField.h */; };
+		E46D7C9217D122D7007D2F0E /* HMLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7C8517D122D7007D2F0E /* HMLabelField.m */; };
+		E46D7C9317D122D7007D2F0E /* HMLabelMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D7C8717D122D7007D2F0E /* HMLabelMenuItem.h */; };
+		E46D7C9417D122D7007D2F0E /* HMLabelMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7C8817D122D7007D2F0E /* HMLabelMenuItem.m */; };
+		E46D7C9617D122D7007D2F0E /* HMLabelMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = E46D7C8B17D122D7007D2F0E /* HMLabelMenuView.h */; };
+		E46D7C9717D122D7007D2F0E /* HMLabelMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7C8C17D122D7007D2F0E /* HMLabelMenuView.m */; };
+		E46D7C9C17D1232B007D2F0E /* HMLabelCell.png in Resources */ = {isa = PBXBuildFile; fileRef = E46D7C9817D1232B007D2F0E /* HMLabelCell.png */; };
+		E46D7C9D17D1232B007D2F0E /* HMLabelControl.png in Resources */ = {isa = PBXBuildFile; fileRef = E46D7C9917D1232B007D2F0E /* HMLabelControl.png */; };
+		E46D7C9E17D1232B007D2F0E /* HMLabelField.png in Resources */ = {isa = PBXBuildFile; fileRef = E46D7C9A17D1232B007D2F0E /* HMLabelField.png */; };
+		E46D7C9F17D1232B007D2F0E /* HMLabelMenuItem.png in Resources */ = {isa = PBXBuildFile; fileRef = E46D7C9B17D1232B007D2F0E /* HMLabelMenuItem.png */; };
+		E46D7CA217D12344007D2F0E /* HMLabelFieldIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = E46D7CA117D12344007D2F0E /* HMLabelFieldIntegration.m */; };
+		E46D7CAB17D1237A007D2F0E /* HMLabelCell.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = E46D7CA717D1237A007D2F0E /* HMLabelCell.classdescription */; };
+		E46D7CAC17D1237A007D2F0E /* HMLabelControl.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = E46D7CA817D1237A007D2F0E /* HMLabelControl.classdescription */; };
+		E46D7CAD17D1237A007D2F0E /* HMLabelField.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = E46D7CA917D1237A007D2F0E /* HMLabelField.classdescription */; };
+		E46D7CAE17D1237A007D2F0E /* HMLabelMenuItem.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = E46D7CAA17D1237A007D2F0E /* HMLabelMenuItem.classdescription */; };
 		F4C24A1D158D708800CE95B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4C24A16158D708800CE95B1 /* InfoPlist.strings */; };
 		F4C24A1E158D708800CE95B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C24A18158D708800CE95B1 /* MainMenu.xib */; };
 		F4C24A20158D708800CE95B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C24A1C158D708800CE95B1 /* main.m */; };
-		F4C24A25158D70ED00CE95B1 /* HMLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C2E11C27CFC00232358 /* HMLabelCell.m */; };
-		F4C24A26158D70F100CE95B1 /* HMLabelControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3311C27D0800232358 /* HMLabelControl.m */; };
-		F4C24A27158D70F400CE95B1 /* HMLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3511C27D0800232358 /* HMLabelField.m */; };
-		F4C24A28158D70F700CE95B1 /* HMLabelMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3711C27D0800232358 /* HMLabelMenuItem.m */; };
-		F4C24A29158D70F900CE95B1 /* HMLabelMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3911C27D0800232358 /* HMLabelMenuView.m */; };
 		F4C24A50158D723500CE95B1 /* HMLabelDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C24A4F158D723500CE95B1 /* HMLabelDemoAppDelegate.m */; };
-		F4D24C3011C27CFC00232358 /* HMLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D24C2D11C27CFC00232358 /* HMLabelCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D24C3111C27CFC00232358 /* HMLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C2E11C27CFC00232358 /* HMLabelCell.m */; };
-		F4D24C3211C27CFC00232358 /* HMLabelControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D24C2F11C27CFC00232358 /* HMLabelControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D24C3A11C27D0800232358 /* HMLabelControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3311C27D0800232358 /* HMLabelControl.m */; };
-		F4D24C3B11C27D0800232358 /* HMLabelField.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D24C3411C27D0800232358 /* HMLabelField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D24C3C11C27D0800232358 /* HMLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3511C27D0800232358 /* HMLabelField.m */; };
-		F4D24C3D11C27D0800232358 /* HMLabelMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D24C3611C27D0800232358 /* HMLabelMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D24C3E11C27D0800232358 /* HMLabelMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3711C27D0800232358 /* HMLabelMenuItem.m */; };
-		F4D24C3F11C27D0800232358 /* HMLabelMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D24C3811C27D0800232358 /* HMLabelMenuView.h */; };
-		F4D24C4011C27D0800232358 /* HMLabelMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D24C3911C27D0800232358 /* HMLabelMenuView.m */; };
-		F4D24CB111C283D500232358 /* HMLabelField.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D24CB011C283D500232358 /* HMLabelField.png */; };
-		F4D24CB311C2891B00232358 /* HMLabelCell.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D24CB211C2891B00232358 /* HMLabelCell.png */; };
-		F4D24CB511C28B4000232358 /* HMLabelMenuItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D24CB411C28B4000232358 /* HMLabelMenuItem.png */; };
-		F4D24E4911C3C20F00232358 /* HMLabelControl.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D24E4811C3C20F00232358 /* HMLabelControl.png */; };
-		F4F36D0F11BFCEA70008E7F3 /* HMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F36D0E11BFCEA70008E7F3 /* HMLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,23 +79,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0259C577FE90428111CA0C5A /* HMLabelInspector.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HMLabelInspector.m; sourceTree = "<group>"; };
-		0259C57BFE90428111CA0C5A /* HMLabelInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HMLabelInspector.h; sourceTree = "<group>"; };
 		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		13F8B88907B434F6008AE28D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32DBCF980370C29C00C91783 /* HMLabel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabel_Prefix.pch; sourceTree = "<group>"; };
 		53DF68FD067E5B5A0090B5B0 /* HMLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HMLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DF68FE067E5B5A0090B5B0 /* HMLabel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HMLabel-Info.plist"; sourceTree = "<group>"; };
-		54D33B2806778E3300C9C163 /* HMLabelField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; path = HMLabelField.classdescription; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* HMLabel.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMLabel.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C044829E0C3328F4006E818F /* HMLabelFieldIntegration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HMLabelFieldIntegration.m; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* HMLabelInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = HMLabelInspector.xib; path = English.lproj/HMLabelInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* HMLabelLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = HMLabelLibrary.nib; path = English.lproj/HMLabelLibrary.nib; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E46D7C7E17D122D7007D2F0E /* HMLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelCell.h; sourceTree = "<group>"; };
+		E46D7C7F17D122D7007D2F0E /* HMLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelCell.m; sourceTree = "<group>"; };
+		E46D7C8117D122D7007D2F0E /* HMLabelControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelControl.h; sourceTree = "<group>"; };
+		E46D7C8217D122D7007D2F0E /* HMLabelControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelControl.m; sourceTree = "<group>"; };
+		E46D7C8417D122D7007D2F0E /* HMLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelField.h; sourceTree = "<group>"; };
+		E46D7C8517D122D7007D2F0E /* HMLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelField.m; sourceTree = "<group>"; };
+		E46D7C8717D122D7007D2F0E /* HMLabelMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelMenuItem.h; sourceTree = "<group>"; };
+		E46D7C8817D122D7007D2F0E /* HMLabelMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelMenuItem.m; sourceTree = "<group>"; };
+		E46D7C8917D122D7007D2F0E /* HMLabelMenuItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HMLabelMenuItem.png; sourceTree = "<group>"; };
+		E46D7C8B17D122D7007D2F0E /* HMLabelMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelMenuView.h; sourceTree = "<group>"; };
+		E46D7C8C17D122D7007D2F0E /* HMLabelMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelMenuView.m; sourceTree = "<group>"; };
+		E46D7C9817D1232B007D2F0E /* HMLabelCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HMLabelCell.png; path = Plugin/Resources/HMLabelCell.png; sourceTree = "<group>"; };
+		E46D7C9917D1232B007D2F0E /* HMLabelControl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HMLabelControl.png; path = Plugin/Resources/HMLabelControl.png; sourceTree = "<group>"; };
+		E46D7C9A17D1232B007D2F0E /* HMLabelField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HMLabelField.png; path = Plugin/Resources/HMLabelField.png; sourceTree = "<group>"; };
+		E46D7C9B17D1232B007D2F0E /* HMLabelMenuItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HMLabelMenuItem.png; path = Plugin/Resources/HMLabelMenuItem.png; sourceTree = "<group>"; };
+		E46D7CA117D12344007D2F0E /* HMLabelFieldIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMLabelFieldIntegration.m; path = Plugin/HMLabelFieldIntegration.m; sourceTree = "<group>"; };
+		E46D7CA317D1235E007D2F0E /* HMLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HMLabel.h; path = Plugin/HMLabel.h; sourceTree = "<group>"; };
+		E46D7CA417D1235E007D2F0E /* HMLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HMLabel.m; path = Plugin/HMLabel.m; sourceTree = "<group>"; };
+		E46D7CA517D1235E007D2F0E /* HMLabelInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HMLabelInspector.h; path = Plugin/HMLabelInspector.h; sourceTree = "<group>"; };
+		E46D7CA617D1235E007D2F0E /* HMLabelInspector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HMLabelInspector.m; path = Plugin/HMLabelInspector.m; sourceTree = "<group>"; };
+		E46D7CA717D1237A007D2F0E /* HMLabelCell.classdescription */ = {isa = PBXFileReference; lastKnownFileType = text.plist.ibClassDescription; name = HMLabelCell.classdescription; path = Plugin/HMLabelCell.classdescription; sourceTree = "<group>"; };
+		E46D7CA817D1237A007D2F0E /* HMLabelControl.classdescription */ = {isa = PBXFileReference; lastKnownFileType = text.plist.ibClassDescription; name = HMLabelControl.classdescription; path = Plugin/HMLabelControl.classdescription; sourceTree = "<group>"; };
+		E46D7CA917D1237A007D2F0E /* HMLabelField.classdescription */ = {isa = PBXFileReference; lastKnownFileType = text.plist.ibClassDescription; name = HMLabelField.classdescription; path = Plugin/HMLabelField.classdescription; sourceTree = "<group>"; };
+		E46D7CAA17D1237A007D2F0E /* HMLabelMenuItem.classdescription */ = {isa = PBXFileReference; lastKnownFileType = text.plist.ibClassDescription; name = HMLabelMenuItem.classdescription; path = Plugin/HMLabelMenuItem.classdescription; sourceTree = "<group>"; };
+		E46D7CAF17D1287B007D2F0E /* HMLabel_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMLabel_Prefix.pch; sourceTree = "<group>"; };
 		F4C24A0B158D702700CE95B1 /* HMLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C24A17158D708800CE95B1 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4C24A19158D708800CE95B1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -111,25 +124,6 @@
 		F4C24A1C158D708800CE95B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4C24A4E158D723500CE95B1 /* HMLabelDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelDemoAppDelegate.h; sourceTree = "<group>"; };
 		F4C24A4F158D723500CE95B1 /* HMLabelDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelDemoAppDelegate.m; sourceTree = "<group>"; };
-		F4D24C2D11C27CFC00232358 /* HMLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelCell.h; sourceTree = "<group>"; };
-		F4D24C2E11C27CFC00232358 /* HMLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelCell.m; sourceTree = "<group>"; };
-		F4D24C2F11C27CFC00232358 /* HMLabelControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelControl.h; sourceTree = "<group>"; };
-		F4D24C3311C27D0800232358 /* HMLabelControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelControl.m; sourceTree = "<group>"; };
-		F4D24C3411C27D0800232358 /* HMLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelField.h; sourceTree = "<group>"; };
-		F4D24C3511C27D0800232358 /* HMLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelField.m; sourceTree = "<group>"; };
-		F4D24C3611C27D0800232358 /* HMLabelMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelMenuItem.h; sourceTree = "<group>"; };
-		F4D24C3711C27D0800232358 /* HMLabelMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelMenuItem.m; sourceTree = "<group>"; };
-		F4D24C3811C27D0800232358 /* HMLabelMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelMenuView.h; sourceTree = "<group>"; };
-		F4D24C3911C27D0800232358 /* HMLabelMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabelMenuView.m; sourceTree = "<group>"; };
-		F4D24CB011C283D500232358 /* HMLabelField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HMLabelField.png; sourceTree = "<group>"; };
-		F4D24CB211C2891B00232358 /* HMLabelCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HMLabelCell.png; sourceTree = "<group>"; };
-		F4D24CB411C28B4000232358 /* HMLabelMenuItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HMLabelMenuItem.png; sourceTree = "<group>"; };
-		F4D24E4811C3C20F00232358 /* HMLabelControl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HMLabelControl.png; sourceTree = "<group>"; };
-		F4F36D0D11BFCEA70008E7F3 /* HMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabel.h; sourceTree = "<group>"; };
-		F4F36D0E11BFCEA70008E7F3 /* HMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLabel.m; sourceTree = "<group>"; };
-		F4F36F5711C11BF30008E7F3 /* HMLabelMenuItem.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; path = HMLabelMenuItem.classdescription; sourceTree = "<group>"; };
-		F4F36F5911C11C410008E7F3 /* HMLabelCell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; path = HMLabelCell.classdescription; sourceTree = "<group>"; };
-		F4F36F5B11C11C930008E7F3 /* HMLabelControl.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; path = HMLabelControl.classdescription; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +181,10 @@
 		131E8FE8067F80F40006E0CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F4D24E4811C3C20F00232358 /* HMLabelControl.png */,
-				F4D24CB411C28B4000232358 /* HMLabelMenuItem.png */,
-				F4D24CB211C2891B00232358 /* HMLabelCell.png */,
-				F4D24CB011C283D500232358 /* HMLabelField.png */,
+				E46D7C9817D1232B007D2F0E /* HMLabelCell.png */,
+				E46D7C9917D1232B007D2F0E /* HMLabelControl.png */,
+				E46D7C9A17D1232B007D2F0E /* HMLabelField.png */,
+				E46D7C9B17D1232B007D2F0E /* HMLabelMenuItem.png */,
 				D1AEDE460A6C289C0010C343 /* HMLabelLibrary.nib */,
 				C05B20D80A48CB530099B9E5 /* HMLabelInspector.xib */,
 			);
@@ -249,8 +243,8 @@
 		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C044829E0C3328F4006E818F /* HMLabelFieldIntegration.m */,
-				32DBCF980370C29C00C91783 /* HMLabel_Prefix.pch */,
+				E46D7CAF17D1287B007D2F0E /* HMLabel_Prefix.pch */,
+				E46D7CA117D12344007D2F0E /* HMLabelFieldIntegration.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -258,10 +252,10 @@
 		54D33B2406778DD400C9C163 /* Class Descriptions */ = {
 			isa = PBXGroup;
 			children = (
-				F4F36F5B11C11C930008E7F3 /* HMLabelControl.classdescription */,
-				F4F36F5911C11C410008E7F3 /* HMLabelCell.classdescription */,
-				54D33B2806778E3300C9C163 /* HMLabelField.classdescription */,
-				F4F36F5711C11BF30008E7F3 /* HMLabelMenuItem.classdescription */,
+				E46D7CA717D1237A007D2F0E /* HMLabelCell.classdescription */,
+				E46D7CA817D1237A007D2F0E /* HMLabelControl.classdescription */,
+				E46D7CA917D1237A007D2F0E /* HMLabelField.classdescription */,
+				E46D7CAA17D1237A007D2F0E /* HMLabelMenuItem.classdescription */,
 			);
 			name = "Class Descriptions";
 			sourceTree = "<group>";
@@ -269,10 +263,10 @@
 		54D33B2506778DF000C9C163 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F4F36D0D11BFCEA70008E7F3 /* HMLabel.h */,
-				F4F36D0E11BFCEA70008E7F3 /* HMLabel.m */,
-				0259C57BFE90428111CA0C5A /* HMLabelInspector.h */,
-				0259C577FE90428111CA0C5A /* HMLabelInspector.m */,
+				E46D7CA317D1235E007D2F0E /* HMLabel.h */,
+				E46D7CA417D1235E007D2F0E /* HMLabel.m */,
+				E46D7CA517D1235E007D2F0E /* HMLabelInspector.h */,
+				E46D7CA617D1235E007D2F0E /* HMLabelInspector.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -280,26 +274,67 @@
 		54D33B2C06778E4400C9C163 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				C0894DA40C32F4C100401507 /* Classes */,
+				E46D7C7C17D122D7007D2F0E /* Controls */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
 		};
-		C0894DA40C32F4C100401507 /* Classes */ = {
+		E46D7C7C17D122D7007D2F0E /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				F4D24C2D11C27CFC00232358 /* HMLabelCell.h */,
-				F4D24C2E11C27CFC00232358 /* HMLabelCell.m */,
-				F4D24C2F11C27CFC00232358 /* HMLabelControl.h */,
-				F4D24C3311C27D0800232358 /* HMLabelControl.m */,
-				F4D24C3411C27D0800232358 /* HMLabelField.h */,
-				F4D24C3511C27D0800232358 /* HMLabelField.m */,
-				F4D24C3611C27D0800232358 /* HMLabelMenuItem.h */,
-				F4D24C3711C27D0800232358 /* HMLabelMenuItem.m */,
-				F4D24C3811C27D0800232358 /* HMLabelMenuView.h */,
-				F4D24C3911C27D0800232358 /* HMLabelMenuView.m */,
+				E46D7C7D17D122D7007D2F0E /* HMLabelCell */,
+				E46D7C8017D122D7007D2F0E /* HMLabelControl */,
+				E46D7C8317D122D7007D2F0E /* HMLabelField */,
+				E46D7C8617D122D7007D2F0E /* HMLabelMenuItem */,
+				E46D7C8A17D122D7007D2F0E /* HMLabelMenuView */,
 			);
-			name = Classes;
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		E46D7C7D17D122D7007D2F0E /* HMLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				E46D7C7E17D122D7007D2F0E /* HMLabelCell.h */,
+				E46D7C7F17D122D7007D2F0E /* HMLabelCell.m */,
+			);
+			path = HMLabelCell;
+			sourceTree = "<group>";
+		};
+		E46D7C8017D122D7007D2F0E /* HMLabelControl */ = {
+			isa = PBXGroup;
+			children = (
+				E46D7C8117D122D7007D2F0E /* HMLabelControl.h */,
+				E46D7C8217D122D7007D2F0E /* HMLabelControl.m */,
+			);
+			path = HMLabelControl;
+			sourceTree = "<group>";
+		};
+		E46D7C8317D122D7007D2F0E /* HMLabelField */ = {
+			isa = PBXGroup;
+			children = (
+				E46D7C8417D122D7007D2F0E /* HMLabelField.h */,
+				E46D7C8517D122D7007D2F0E /* HMLabelField.m */,
+			);
+			path = HMLabelField;
+			sourceTree = "<group>";
+		};
+		E46D7C8617D122D7007D2F0E /* HMLabelMenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				E46D7C8717D122D7007D2F0E /* HMLabelMenuItem.h */,
+				E46D7C8817D122D7007D2F0E /* HMLabelMenuItem.m */,
+				E46D7C8917D122D7007D2F0E /* HMLabelMenuItem.png */,
+			);
+			path = HMLabelMenuItem;
+			sourceTree = "<group>";
+		};
+		E46D7C8A17D122D7007D2F0E /* HMLabelMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				E46D7C8B17D122D7007D2F0E /* HMLabelMenuView.h */,
+				E46D7C8C17D122D7007D2F0E /* HMLabelMenuView.m */,
+			);
+			path = HMLabelMenuView;
 			sourceTree = "<group>";
 		};
 		F4C24A15158D708800CE95B1 /* HMLabelDemo */ = {
@@ -323,11 +358,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D24C3011C27CFC00232358 /* HMLabelCell.h in Headers */,
-				F4D24C3211C27CFC00232358 /* HMLabelControl.h in Headers */,
-				F4D24C3B11C27D0800232358 /* HMLabelField.h in Headers */,
-				F4D24C3D11C27D0800232358 /* HMLabelMenuItem.h in Headers */,
-				F4D24C3F11C27D0800232358 /* HMLabelMenuView.h in Headers */,
+				E46D7C9317D122D7007D2F0E /* HMLabelMenuItem.h in Headers */,
+				E46D7C9117D122D7007D2F0E /* HMLabelField.h in Headers */,
+				E46D7C8F17D122D7007D2F0E /* HMLabelControl.h in Headers */,
+				E46D7C8D17D122D7007D2F0E /* HMLabelCell.h in Headers */,
+				E46D7C9617D122D7007D2F0E /* HMLabelMenuView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +428,8 @@
 /* Begin PBXProject section */
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "HMLabel" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -427,17 +464,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B1E025158B9786009B4079 /* HMLabelCell.classdescription in Resources */,
-				F4B1E026158B9786009B4079 /* HMLabelControl.classdescription in Resources */,
-				F4B1E027158B9786009B4079 /* HMLabelField.classdescription in Resources */,
-				F4B1E028158B9786009B4079 /* HMLabelMenuItem.classdescription in Resources */,
+				E46D7CAE17D1237A007D2F0E /* HMLabelMenuItem.classdescription in Resources */,
+				E46D7C9D17D1232B007D2F0E /* HMLabelControl.png in Resources */,
+				E46D7C9C17D1232B007D2F0E /* HMLabelCell.png in Resources */,
 				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
 				C0A47C500A523B730004BDC3 /* HMLabelInspector.xib in Resources */,
+				E46D7C9E17D1232B007D2F0E /* HMLabelField.png in Resources */,
+				E46D7CAB17D1237A007D2F0E /* HMLabelCell.classdescription in Resources */,
+				E46D7CAD17D1237A007D2F0E /* HMLabelField.classdescription in Resources */,
 				D1AEDE470A6C289C0010C343 /* HMLabelLibrary.nib in Resources */,
-				F4D24CB111C283D500232358 /* HMLabelField.png in Resources */,
-				F4D24CB311C2891B00232358 /* HMLabelCell.png in Resources */,
-				F4D24CB511C28B4000232358 /* HMLabelMenuItem.png in Resources */,
-				F4D24E4911C3C20F00232358 /* HMLabelControl.png in Resources */,
+				E46D7CAC17D1237A007D2F0E /* HMLabelControl.classdescription in Resources */,
+				E46D7C9F17D1232B007D2F0E /* HMLabelMenuItem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +494,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D24C3111C27CFC00232358 /* HMLabelCell.m in Sources */,
-				F4D24C3A11C27D0800232358 /* HMLabelControl.m in Sources */,
-				F4D24C3C11C27D0800232358 /* HMLabelField.m in Sources */,
-				F4D24C3E11C27D0800232358 /* HMLabelMenuItem.m in Sources */,
-				F4D24C4011C27D0800232358 /* HMLabelMenuView.m in Sources */,
+				E46D7C8E17D122D7007D2F0E /* HMLabelCell.m in Sources */,
+				E46D7C9417D122D7007D2F0E /* HMLabelMenuItem.m in Sources */,
+				E46D7C9217D122D7007D2F0E /* HMLabelField.m in Sources */,
+				E46D7C9017D122D7007D2F0E /* HMLabelControl.m in Sources */,
+				E46D7C9717D122D7007D2F0E /* HMLabelMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,9 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1AC96C0486D14A00FE50C9 /* HMLabelInspector.m in Sources */,
-				C044829F0C3328F4006E818F /* HMLabelFieldIntegration.m in Sources */,
-				F4F36D0F11BFCEA70008E7F3 /* HMLabel.m in Sources */,
+				E46D7CA217D12344007D2F0E /* HMLabelFieldIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,11 +514,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4C24A29158D70F900CE95B1 /* HMLabelMenuView.m in Sources */,
-				F4C24A27158D70F400CE95B1 /* HMLabelField.m in Sources */,
-				F4C24A28158D70F700CE95B1 /* HMLabelMenuItem.m in Sources */,
-				F4C24A26158D70F100CE95B1 /* HMLabelControl.m in Sources */,
-				F4C24A25158D70ED00CE95B1 /* HMLabelCell.m in Sources */,
 				F4C24A20158D708800CE95B1 /* main.m in Sources */,
 				F4C24A50158D723500CE95B1 /* HMLabelDemoAppDelegate.m in Sources */,
 			);
@@ -540,6 +570,8 @@
 		C056398008A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -552,6 +584,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "HMLabel-Info.plist";
 				PRODUCT_NAME = HMLabel;
+				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
 			};
 			name = Debug;
@@ -559,6 +592,8 @@
 		C056398108A954F8003078D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -569,6 +604,7 @@
 				INFOPLIST_FILE = "HMLabel-Info.plist";
 				INSTALL_MODE_FLAG = "go-w,a+rX";
 				PRODUCT_NAME = HMLabel;
+				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
 			};
 			name = Release;
@@ -576,6 +612,7 @@
 		C056398408A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					$inherited,
@@ -598,6 +635,7 @@
 		C056398508A954F8003078D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -656,7 +694,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -669,7 +707,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};
