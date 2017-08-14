@@ -29,7 +29,7 @@
 @property (assign) IBOutlet HMLabelControl *labelControl;
 @property (assign) IBOutlet HMLabelControl *squareLabelControl;
 @property (assign) IBOutlet HMLabelMenuItem *labelMenuItem;
-@property NSInteger labelValue;
+@property (nonatomic) NSInteger labelValue;
 
 
 - (IBAction)changeLabel:(id)sender;
