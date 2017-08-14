@@ -1,6 +1,0 @@
-{
-	ClassName = HMLabelCell;
-	SuperClass = NSActionCell;
-	Actions = {};
-	Outlets = {};
-}

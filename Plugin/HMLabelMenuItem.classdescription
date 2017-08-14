@@ -1,6 +1,0 @@
-{
-	ClassName = HMLabelMenuItem;
-	SuperClass = NSMenuItem;
-	Actions = {};
-	Outlets = {};
-}
