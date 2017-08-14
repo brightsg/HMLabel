@@ -484,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "HMLabel-Info.plist";
+				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = HMLabel;
 				SKIP_INSTALL = NO;
 			};
@@ -502,6 +503,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "HMLabel-Info.plist";
 				INSTALL_MODE_FLAG = "go-w,a+rX";
+				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = HMLabel;
 				SKIP_INSTALL = NO;
 			};
