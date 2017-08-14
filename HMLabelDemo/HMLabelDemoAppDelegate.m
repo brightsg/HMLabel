@@ -70,10 +70,10 @@ static NSString *DemoName = @"name";
 	[labelField bind:@"value" toObject:self withKeyPath:@"labelValue" options:nil];
 	
 	[squareLabelField setDrawX:YES];
-	[squareLabelField setLabelStyle:HMSquareStyle];
+	[squareLabelField setLabelStyle:HMRoundedSquareStyle];
 	[squareLabelField bind:@"value" toObject:self withKeyPath:@"labelValue" options:nil];
 	
-	[squareLabelControl setLabelStyle:HMSquareStyle];
+	[squareLabelControl setLabelStyle:HMRoundedSquareStyle];
 	[squareLabelControl bind:@"value" toObject:self withKeyPath:@"labelValue" options:nil];
 	[labelControl bind:@"value" toObject:self withKeyPath:@"labelValue" options:nil];
 }

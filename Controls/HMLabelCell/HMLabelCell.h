@@ -62,7 +62,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-enum _HMLabelColor {
+typedef enum _HMLabelColor {
 	HMLabelNone = 0,
 	HMLabelRed,
 	HMLabelOrange,
@@ -71,12 +71,13 @@ enum _HMLabelColor {
 	HMLabelBlue,
 	HMLabelPurple,
 	HMLabelGray,
-};
+} HMLabelColor;
 
-enum _HMLabelStyle {
+typedef enum _HMLabelStyle {
 	HMCircleStyle,
-	HMSquareStyle,
-};
+	HMRoundedSquareStyle,
+    HMSquareStyle
+} HMLabelStyle;
 
 
 
@@ -93,5 +94,6 @@ enum _HMLabelStyle {
 - (NSInteger)labelStyle;
 - (void)setDrawX:(BOOL)flag;
 - (BOOL)isDrawX;
+@property (assign, nonatomic) BOOL useGradient;
 
 @end

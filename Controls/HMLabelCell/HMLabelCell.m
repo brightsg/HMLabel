@@ -166,11 +166,17 @@
 - (NSGradient *)gradient
 {
 	if([self integerValue] == HMLabelNone) return nil;
-	
 	if(gradient) return gradient;
-	gradient = [[NSGradient alloc] initWithStartingColor:[self highlightColor] endingColor:[self baseColor]];
+    NSColor *startingColor = self.useGradient ? [self highlightColor] : [self baseColor];
+	gradient = [[NSGradient alloc] initWithStartingColor:startingColor endingColor:[self baseColor]];
 	
 	return gradient;
+}
+
+- (void)setUseGradient:(BOOL)useGradient
+{
+    _useGradient = useGradient;
+    gradient = nil;
 }
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
@@ -200,12 +206,15 @@
 }
 - (NSBezierPath *)bezierWithFrame:(NSRect)cellFrame
 {
-	if(labelStyle == HMSquareStyle) {
+	if(labelStyle == HMRoundedSquareStyle) {
 		CGFloat radius = cellFrame.size.width * 0.1;
 		radius = MIN(radius, cellFrame.size.height * 0.1);
 		return [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:radius yRadius:radius];
 	}
-	
+    else if(labelStyle == HMSquareStyle) {
+        return [NSBezierPath bezierPathWithRect:cellFrame];
+    }
+    
 	CGFloat circleRadius = (cellFrame.size.height - 2) / 2.0;
 	
 	NSRect circleRect = NSMakeRect(NSMidX(cellFrame) - circleRadius, NSMidY(cellFrame) - circleRadius,
@@ -214,7 +223,7 @@
 }
 - (CGFloat)gradientAngle
 {
-	if(labelStyle == HMSquareStyle) return -90.0;
+	if(labelStyle == HMRoundedSquareStyle) return -90.0;
 	return 90.0;
 }
 
