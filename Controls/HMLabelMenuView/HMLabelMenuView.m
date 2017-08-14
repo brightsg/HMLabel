@@ -85,14 +85,14 @@ static const CGFloat labelSize = 19;
 - (void)setupCells
 {
 	title = [[NSTextFieldCell alloc] initTextCell:@""];
-	[title setControlSize:NSRegularControlSize];
+	[title setControlSize:NSControlSizeRegular];
 	[title setFont:[self titleFont]];
 	
 	
 	labelName = [[NSTextFieldCell alloc] initTextCell:@""];
-	[labelName setControlSize:NSSmallControlSize];
+	[labelName setControlSize:NSControlSizeSmall];
 	[labelName setFont:[self labelNameFont]];
-	[labelName setAlignment:NSCenterTextAlignment];
+	[labelName setAlignment:NSTextAlignmentCenter];
 	[labelName setTextColor:[NSColor disabledControlTextColor]];
 	
 	NSMutableArray *cells = [NSMutableArray arrayWithCapacity:labelCount];
@@ -103,7 +103,7 @@ static const CGFloat labelSize = 19;
 		[cell setEnabled:YES];
 		[cell setBordered:YES];
 		[cell setIntegerValue:i];
-		[cell setLabelStyle:HMSquareStyle];
+		[cell setLabelStyle:HMCircleStyle];
 		[cell setDrawX:YES];
 	}
 	labelCells = [[NSArray alloc] initWithArray:cells];
@@ -113,6 +113,7 @@ static const CGFloat labelSize = 19;
     self = [super initWithFrame:frame];
     if (self) {
         [self setupCells];
+        _showLabel = YES;
     }
     return self;
 }
@@ -122,7 +123,6 @@ static const CGFloat labelSize = 19;
 	CGFloat height = 0;
 	
 	NSSize size = [[title stringValue] sizeWithAttributes:[self titleAttribute]];
-	//	HMLog(HMLogLevelDebug, @"title size is %@", NSStringFromSize(size));
 	width = MAX(width, size.width + leftMargin);
 	height += size.height;
 	
@@ -131,8 +131,11 @@ static const CGFloat labelSize = 19;
 	
 	rect = [self labelRectForIndex:labelCount - 1];
 	width = MAX(width, NSMaxX(rect));
-	height += rect.size.height;
-	
+    
+    if (self.showLabel) {
+        height += rect.size.height;
+    }
+    
 	width += rightMargin;
 	height += 6 + 6;
 	
@@ -140,27 +143,8 @@ static const CGFloat labelSize = 19;
 }
 - (void)sizeToFit
 {
-	CGFloat width = 200;
-	CGFloat height = 0;
-	
-	NSSize size = [[title stringValue] sizeWithAttributes:[self titleAttribute]];
-//	HMLog(HMLogLevelDebug, @"title size is %@", NSStringFromSize(size));
-	width = MAX(width, size.width + leftMargin);
-	height += size.height;
-	
-	NSRect rect = [self labelNameRect];
-	height += rect.size.height;
-	
-	rect = [self labelRectForIndex:labelCount - 1];
-	width = MAX(width, NSMaxX(rect));
-	height += rect.size.height;
-	
-	width += rightMargin;
-	height += 6 + 6;
-	
-	[self setFrameSize:NSMakeSize(width, height)];
+	[self setFrameSize:self.minimumSize];
 }
-
 
 -(CGFloat)titleFontSize
 {
@@ -194,7 +178,7 @@ static const CGFloat labelSize = 19;
 }
 - (CGFloat)labelNameSize
 {
-	return [NSFont systemFontSizeForControlSize:NSSmallControlSize];
+	return [NSFont systemFontSizeForControlSize:NSControlSizeSmall];
 }
 - (NSFont *)labelNameFont
 {
@@ -245,13 +229,12 @@ static const CGFloat labelSize = 19;
 		}
 	}
 	
-	cellFrame = [self labelNameRect];
-	if(NSIntersectsRect(rect, cellFrame)) {
-		[labelName drawWithFrame:cellFrame inView:self];
-	}
-	
-//	[[NSColor redColor] set];
-//	NSFrameRect([self frame]);
+    if (self.showLabel) {
+        cellFrame = [self labelNameRect];
+        if(NSIntersectsRect(rect, cellFrame)) {
+            [labelName drawWithFrame:cellFrame inView:self];
+        }
+    }
 }
 - (void)setMenuLabel:(NSString *)menuTitle
 {
@@ -434,4 +417,16 @@ static const CGFloat labelSize = 19;
 	}
 }
 
+- (void)setShowLabel:(BOOL)value
+{
+    _showLabel = value;
+    [self sizeToFit];
+}
+
+- (void)setLabelStyle:(NSInteger)style
+{
+    for(id cell in labelCells) {
+        [cell setLabelStyle:style];
+    }
+}
 @end

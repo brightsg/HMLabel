@@ -73,4 +73,5 @@
 - (NSInteger)integerValue;
 - (NSInteger)labelValue;
 - (void)setLabelValue:(NSInteger)value;
+- (void)setShowLabel:(BOOL)value;
 @end

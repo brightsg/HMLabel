@@ -168,4 +168,24 @@
 	}
 }
 
+- (void)setShowLabel:(BOOL)value
+{
+    [(HMLabelMenuView *)self.view setShowLabel:value];
+}
+
+- (void) setHidden:(BOOL)flag {
+    
+    [super setHidden:flag];
+    
+    HMLabelMenuView *view = (id)[self view];
+    [view setHidden:flag];
+    
+    // if our view is hidden, give it a zero height so it won't draw at all
+    if (flag) {
+        [view setFrameSize:NSMakeSize([view frame].size.width, 0)];
+    }
+    else {
+        [view sizeToFit];
+    }
+}
 @end

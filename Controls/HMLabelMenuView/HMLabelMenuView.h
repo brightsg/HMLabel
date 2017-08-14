@@ -84,4 +84,8 @@
 
 - (void)setMenuLabel:(NSString *)menuLabel;
 - (NSString *)menuLabel;
+- (void)setLabelStyle:(NSInteger)style;
+
+@property (assign, nonatomic) BOOL showLabel;
+
 @end

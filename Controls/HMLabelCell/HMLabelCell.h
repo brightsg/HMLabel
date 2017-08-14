@@ -63,7 +63,7 @@
 
 
 enum _HMLabelColor {
-	HMLabelNone,
+	HMLabelNone = 0,
 	HMLabelRed,
 	HMLabelOrange,
 	HMLabelYellow,
