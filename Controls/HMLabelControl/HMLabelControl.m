@@ -71,6 +71,7 @@
 	id cell = [[HMLabelCell alloc] initTextCell:@""];
 	[self setCell:cell];
 }
+
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
