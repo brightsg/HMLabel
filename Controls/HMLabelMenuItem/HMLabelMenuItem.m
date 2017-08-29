@@ -60,10 +60,7 @@
 */
 
 #import "HMLabelMenuItem.h"
-
 #import "HMLabelMenuView.h"
-
-
 
 @implementation HMLabelMenuItem
 + (void)initialize
@@ -119,10 +116,12 @@
 }
 - (id)copyWithZone:(NSZone *)zone
 {
-	id result = [super copyWithZone:zone];
-	[result setObjectValue:[self objectValue]];
-	
-	return result;
+	HMLabelMenuItem *copy = [super copyWithZone:zone];
+	[copy setObjectValue:[self objectValue]];
+    copy.labelValue = self.labelValue;
+    copy.showLabel = self.labelView.showLabel;
+    copy.hidden = self.hidden;
+	return copy;
 }
 
 - (void)setView:(NSView *)view
@@ -170,22 +169,21 @@
 
 - (void)setShowLabel:(BOOL)value
 {
-    [(HMLabelMenuView *)self.view setShowLabel:value];
+    [self.labelView setShowLabel:value];
 }
 
-- (void) setHidden:(BOOL)flag {
+- (void)setHidden:(BOOL)flag {
     
     [super setHidden:flag];
     
-    HMLabelMenuView *view = (id)[self view];
-    [view setHidden:flag];
+    [self.labelView setHidden:flag];
     
     // if our view is hidden, give it a zero height so it won't draw at all
     if (flag) {
-        [view setFrameSize:NSMakeSize([view frame].size.width, 0)];
+        [self.labelView setFrameSize:NSMakeSize([self.labelView frame].size.width, 0)];
     }
     else {
-        [view sizeToFit];
+        [self.labelView sizeToFit];
     }
 }
 @end
