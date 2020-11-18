@@ -57,6 +57,7 @@
 		53DF68FE067E5B5A0090B5B0 /* HMLabel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HMLabel-Info.plist"; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB7CDC2E25642E3100186B40 /* macOS-native-arch.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "macOS-native-arch.xcconfig"; sourceTree = "<group>"; };
 		ABB6C562216BAB4B00B2381C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E46D7C7E17D122D7007D2F0E /* HMLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLabelCell.h; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		0259C574FE90428111CA0C5A /* XspfMLabel */ = {
 			isa = PBXGroup;
 			children = (
+				AB7CDC2E25642E3100186B40 /* macOS-native-arch.xcconfig */,
 				F4C24A15158D708800CE95B1 /* HMLabelDemo */,
 				54D33B2C06778E4400C9C163 /* Framework */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -510,6 +512,7 @@
 		};
 		C056398D08A954F8003078D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7CDC2E25642E3100186B40 /* macOS-native-arch.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
