@@ -216,6 +216,7 @@ static const CGFloat labelSize = 19;
 }
 
 - (void)drawRect:(NSRect)rect {
+    self.clipsToBounds = YES;
     // Drawing code here.
 	NSRect cellFrame = [self titleRect];
 	if(NSIntersectsRect(rect, cellFrame)) {

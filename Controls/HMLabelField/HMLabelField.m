@@ -84,6 +84,7 @@ static const CGFloat yMargin = 2;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
+    self.clipsToBounds = YES;
     // Drawing code here.
 	NSInteger i;
 	for(i = 0; i < labelCount; i++) {
